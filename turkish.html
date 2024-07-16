@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü</title>
+    <link rel="stylesheet" href="style/style-menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="back-to-top" onclick="scrollToTop()">
+        ↑
+    </div>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Restoran Logosu" onclick="location.href='index.html'">
+        </div>
+        <div class="menu-title">
+            <h1>MENÜ</h1>
+        </div>
+        <div class="tabs">
+            <button class="tab-button" onclick="filterMenu('pide')">Pideler ve Lahmacun</button>
+            <button class="tab-button" onclick="filterMenu('kofte')">Köfte ve Izgaralar</button>
+            <button class="tab-button" onclick="filterMenu('guvec')">Güveç Yemekleri</button>
+            <button class="tab-button" onclick="filterMenu('salata')">Salatalar</button>
+            <button class="tab-button" onclick="filterMenu('tatli')">Tatlılar</button>
+            <button class="tab-button" onclick="filterMenu('icecek')">İçecekler</button>
+            <button class="tab-button active" onclick="filterMenu('all')">Hepsi</button>
+        </div>
+
+        <div class="menu-section all">
+            <h2>Pideler ve Lahmacun</h2>
+            <div class="menu-container">
+                <div class="menu-item pide">
+                    <img src="img/foods/pide-pey.png" alt="Peynirli Pide">
+                    <div class="item-details">
+                        <h2>Peynirli Pide</h2>
+                        <p>₺200</p>
+                    </div>
+                </div>
+                <div class="menu-item pide">
+                    <img src="img/foods/pide-kıy.png" alt="Kıymalı Pide">
+                    <div class="item-details">
+                        <h2>Kıymalı Pide</h2>
+                        <p>₺230</p>
+                    </div>
+                </div>
+                <div class="menu-item pide">
+                    <img src="img/foods/pide-kus.png" alt="Kuşbaşılı Pide">
+                    <div class="item-details">
+                        <h2>Kuşbaşılı Pide</h2>
+                        <p>₺250</p>
+                    </div>
+                </div>
+                <div class="menu-item pide">
+                    <img src="img/foods/lahmacun.png" alt="Lahmacun">
+                    <div class="item-details">
+                        <h2>Lahmacun</h2>
+                        <p>₺90</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section all">
+            <h2>Köfte ve Izgaralar</h2>
+            <div class="menu-container">
+                <div class="menu-item kofte">
+                    <img src="img/foods/kofte.png" alt="Köfte 1">
+                    <div class="item-details">
+                        <h2>Köfte 1KG</h2>
+                        <p>₺900</p>
+                    </div>
+                </div>
+                <div class="menu-item kofte">
+                    <img src="img/foods/pirzola.png" alt="Pirzola">
+                    <div class="item-details">
+                        <h2>Pirzola 1KG</h2>
+                        <p>₺900</p>
+                    </div>
+                </div>
+                <div class="menu-item kofte">
+                    <img src="img/foods/tavuk.png" alt="Tavuk">
+                    <div class="item-details">
+                        <h2>Tavuk Izgara 1KG</h2>
+                        <p>Bunu koymak için koydum. Olmayacak</p>
+                    </div>
+                </div>
+                <div class="menu-item kofte">
+                    <img src="img/foods/kofte-ekmek.png" alt="Ekmek Arası Köfte">
+                    <div class="item-details">
+                        <h2>Ekmek Arası Köfte</h2>
+                        <p>₺200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section all">
+            <h2>Güveç Yemekleri</h2>
+            <div class="menu-container">
+                <div class="menu-item guvec">
+                    <img src="img/foods/belen-tava.png" alt="Belen Tava">
+                    <div class="item-details">
+                        <h2>Belen Tava</h2>
+                        <p>₺300</p>
+                    </div>
+                </div>
+                <div class="menu-item guvec">
+                    <img src="img/foods/tavuk-tava.png" alt="Tavuk Güveç">
+                    <div class="item-details">
+                        <h2>Tavuk Güveç</h2>
+                        <p>₺200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section all">
+            <h2>Salatalar</h2>
+            <div class="menu-container">
+                <div class="menu-item salata">
+                    <img src="img/foods/salata.png" alt="Salata">
+                    <div class="item-details">
+                        <h2>Salata</h2>
+                        <p>₺80</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section all">
+            <h2>Tatlılar</h2>
+            <div class="menu-container">
+                <div class="menu-item tatli">
+                    <img src="img/foods/sufle.png" alt="Sufle">
+                    <div class="item-details">
+                        <h2>Sufle</h2>
+                        <p>₺80</p>
+                    </div>
+                </div>
+                <div class="menu-item tatli">
+                    <img src="img/foods/sutlac.png" alt="Sütlaç">
+                    <div class="item-details">
+                        <h2>Hamsiköy Sütlacı</h2>
+                        <p>₺80</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section all">
+            <h2>İçecekler</h2>
+            <div class="menu-container">
+                <div class="menu-item icecek">
+                    <img src="img/foods/kola.png" alt="Kola">
+                    <div class="item-details">
+                        <h2>Kola 250ml</h2>
+                        <p>₺60</p>
+                    </div>
+                </div>
+                <div class="menu-item icecek">
+                    <img src="img/foods/fanta.png" alt="Fanta">
+                    <div class="item-details">
+                        <h2>Fanta 250ml</h2>
+                        <p>₺60</p>
+                    </div>
+                </div>
+                <div class="menu-item icecek">
+                    <img src="img/foods/seftali.png" alt="Şeftali">
+                    <div class="item-details">
+                        <h2>Şeftalili Soğuk Çay 250ml</h2>
+                        <p>₺60</p>
+                    </div>
+                </div>
+                <div class="menu-item icecek">
+                    <img src="img/foods/limon.png" alt="Limon">
+                    <div class="item-details">
+                        <h2>Limonlu Soğuk Çay 250ml</h2>
+                        <p>₺60</p>
+                    </div>
+                </div>
+                <div class="menu-item icecek">
+                    <img src="img/foods/ayran.png" alt="Ayran">
+                    <div class="item-details">
+                        <h2>Ayran 300ml</h2>
+                        <p>₺40</p>
+                    </div>
+                </div>
+                <div class="menu-item icecek">
+                    <img src="img/foods/soda.png" alt="Soda">
+                    <div class="item-details">
+                        <h2>Soda 200ml</h2>
+                        <p>₺20</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterMenu(category) {
+            var sections = document.getElementsByClassName('menu-section');
+            for (var i = 0; i < sections.length; i++) {
+                if (category === 'all') {
+                    sections[i].style.display = 'block';
+                } else if (sections[i].getElementsByClassName(category).length > 0) {
+                    sections[i].style.display = 'block';
+                } else {
+                    sections[i].style.display = 'none';
+                }
+            }
+
+            var buttons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+
+            document.querySelector(`.tab-button[onclick="filterMenu('${category}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
