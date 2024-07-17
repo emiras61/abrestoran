@@ -1,31 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    window.onscroll = function() {
-        const backToTopButton = document.querySelector('.back-to-top');
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            backToTopButton.style.display = "block";
-        } else {
-            backToTopButton.style.display = "none";
-        }
-    };
-
-    function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>AŞIKLAR B&R Menu</title>
     <link rel="stylesheet" href="style/style-menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="back-to-top" onclick="scrollToTop()">
-        ↑
-    </div>
-    
     <div class="container">
         <div class="logo">
             <img src="img/logo.png" alt="Restaurant Logo" onclick="location.href='index.html'">
@@ -34,13 +16,27 @@
             <h1>MENU</h1>
         </div>
         <div class="tabs">
+            <button class="tab-button active" onclick="filterMenu('all')">All</button>
+            <button class="tab-button" onclick="filterMenu('corba')">Soup</button>
             <button class="tab-button" onclick="filterMenu('pide')">Pides and Lahmacun</button>
             <button class="tab-button" onclick="filterMenu('kofte')">Köfte and Grills</button>
             <button class="tab-button" onclick="filterMenu('guvec')">Stew Dishes</button>
             <button class="tab-button" onclick="filterMenu('salata')">Salads</button>
             <button class="tab-button" onclick="filterMenu('tatli')">Desserts</button>
             <button class="tab-button" onclick="filterMenu('icecek')">Beverages</button>
-            <button class="tab-button active" onclick="filterMenu('all')">All</button>
+        </div>
+
+        <div class="menu-section all">
+            <h2>Soup</h2>
+            <div class="menu-container">
+                <div class="menu-item corba">
+                    <img src="img/foods/corba.png" alt="Soup">
+                    <div class="item-details">
+                        <h2>Soup of the Day</h2>
+                        <p>₺80</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="menu-section all">
@@ -95,6 +91,20 @@
                     </div>
                 </div>
                 <div class="menu-item kofte">
+                    <img src="img/foods/kofte.png" alt="Köfte Pors">
+                    <div class="item-details">
+                        <h2>Meatballs (1 Portion)</h2>
+                        <p>₺200</p>
+                    </div>
+                </div>
+                <div class="menu-item kofte">
+                    <img src="img/foods/pirzola.png" alt="Pirzola Pors">
+                    <div class="item-details">
+                        <h2>Chop (1 Portion)</h2>
+                        <p>₺200</p>
+                    </div>
+                </div>
+                <div class="menu-item kofte">
                     <img src="img/foods/tavuk.png" alt="Chicken">
                     <div class="item-details">
                         <h2>Grilled Chicken 1KG</h2>
@@ -137,8 +147,22 @@
                 <div class="menu-item salata">
                     <img src="img/foods/salata.png" alt="Salad">
                     <div class="item-details">
-                        <h2>Salad</h2>
+                        <h2>Salad (1 Person)</h2>
+                        <p>₺50</p>
+                    </div>
+                </div>
+                <div class="menu-item salata">
+                    <img src="img/foods/salata.png" alt="Salad">
+                    <div class="item-details">
+                        <h2>Salad (2 People)</h2>
                         <p>₺80</p>
+                    </div>
+                </div>
+                <div class="menu-item salata">
+                    <img src="img/foods/salata.png" alt="Salad">
+                    <div class="item-details">
+                        <h2>Salad (4 People)</h2>
+                        <p>₺150</p>
                     </div>
                 </div>
             </div>
@@ -182,14 +206,14 @@
                     </div>
                 </div>
                 <div class="menu-item icecek">
-                    <img src="img/foods/seftali.png" alt="Peach Tea">
+                    <img src="img/foods/seftali.png" alt="Peach Iced Tea">
                     <div class="item-details">
                         <h2>Peach Iced Tea 250ml</h2>
                         <p>₺60</p>
                     </div>
                 </div>
                 <div class="menu-item icecek">
-                    <img src="img/foods/limon.png" alt="Lemon Tea">
+                    <img src="img/foods/limon.png" alt="Lemon Iced Tea">
                     <div class="item-details">
                         <h2>Lemon Iced Tea 250ml</h2>
                         <p>₺60</p>

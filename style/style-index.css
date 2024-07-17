@@ -1,11 +1,15 @@
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     background: rgb(172, 162, 145);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -14,6 +18,7 @@ body {
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
 }
 
 .logo img {
@@ -44,7 +49,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.language-box:hover {
+.language-box img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -63,10 +68,49 @@ body {
     color: #555;
 }
 
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer h2 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 10px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media a img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-media a img:hover {
+    transform: scale(1.2);
+}
+
 /* Mobil uyumlu tasarım için medya sorguları */
 @media (max-width: 768px) {
     .container {
         padding: 20px;
+        margin-bottom: 20px; /* Mobilde alt boşluk */
+        margin-top: 20px; /* Mobilde üst boşluk */
     }
 
     .logo img {
@@ -91,5 +135,17 @@ body {
 
     .language-box p {
         font-size: 20px;
+    }
+    
+    footer h2 {
+        font-size: 15px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .social-media a img {
+        width: 30px;
     }
 }
