@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AŞIKLAR B&R Menü - TV</title>
+    <link rel="stylesheet" href="style/style-menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: rgb(172, 162, 145);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 60%;
+            height: 80%;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .menu-slide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-details {
+            background: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            height: 400px;
+            text-align: center;
+            margin-top: 250px;
+        }
+
+        .menu-slide img {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .item-details h2 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .item-details p {
+            font-size: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Restoran Logosu" onclick="location.href='index.html'">
+        </div>
+        <div class="slideshow-container">
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/pide-pey.png" alt="Peynirli Pide">
+                    <h2>Peynirli Pide</h2>
+                    <p>₺200</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/pide-kıy.png" alt="Kıymalı Pide">
+                    <h2>Kıymalı Pide</h2>
+                    <p>₺220</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/pide-tav.png" alt="Tavuklu Pide">
+                    <h2>Tavuklu Pide</h2>
+                    <p>₺200</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/pide-kar.png" alt="Karışık Pide">
+                    <h2>Karışık Pide</h2>
+                    <p>₺250</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/lahmacun.png" alt="Lahmacun">
+                    <h2>Lahmacun (Duble)</h2>
+                    <p>₺180</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/kofte.png" alt="Köfte 1KG">
+                    <h2>Köfte 1KG</h2>
+                    <p>₺800</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/pirzola.png" alt="Pirzola">
+                    <h2>Kuzu Pirzola 1KG</h2>
+                    <p>₺800</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/kofte-ekmek.png" alt="Ekmek Arası Köfte">
+                    <h2>Ekmek Arası Köfte</h2>
+                    <p>₺200</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/belen-tava.png" alt="Belen Tava">
+                    <h2>Belen Tava (1 Porsiyon)</h2>
+                    <p>₺300</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/salata.png" alt="Salata">
+                    <h2>Salata (1 Kişilik)</h2>
+                    <p>₺50</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/kola.png" alt="Kola">
+                    <h2>Kola 330ml</h2>
+                    <p>₺50</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/fanta.png" alt="Fanta">
+                    <h2>Fanta 330ml</h2>
+                    <p>₺50</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/seftali.png" alt="Şeftali">
+                    <h2>Şeftalili Soğuk Çay 330ml</h2>
+                    <p>₺50</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/limon.png" alt="Limon">
+                    <h2>Limonlu Soğuk Çay 330ml</h2>
+                    <p>₺50</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/mis2.png" alt="Ayran">
+                    <h2>Ayran 200ml</h2>
+                    <p>₺15</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/mis.png" alt="Ayran2">
+                    <h2>Ayran 300ml</h2>
+                    <p>₺20</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/soda.png" alt="Soda">
+                    <h2>Soda 200ml</h2>
+                    <p>₺15</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/kola1.png" alt="Kola 1">
+                    <h2>Kola 1Lt</h2>
+                    <p>₺70</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/fanta1.png" alt="Fanta 1">
+                    <h2>Fanta 1Lt</h2>
+                    <p>₺70</p>
+                </div>
+            </div>
+            <div class="menu-slide">
+                <div class="item-details">
+                    <img src="img/foods/meyve.png" alt="Meyve Suyu">
+                    <h2>Meyve Suyu 1Lt</h2>
+                    <p>₺60</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var slides = document.getElementsByClassName("menu-slide");
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "flex"; // Flex olarak ayarlandı
+            setTimeout(showSlides, 3000); // 3 saniyede bir değişim
+        }
+    </script>
+</body>
+
+</html>
